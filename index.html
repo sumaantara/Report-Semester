@@ -41,18 +41,17 @@
                     <div class="ml-10 flex items-baseline space-x-4">
                         <a href="#summary" class="nav-link text-gray-600 hover:text-blue-500 px-3 py-2 text-sm font-medium border-b-2">Ringkasan</a>
                         <a href="#achievements" class="nav-link text-gray-600 hover:text-blue-500 px-3 py-2 text-sm font-medium border-b-2">Pencapaian</a>
-                        <a href="#challenges" class="nav-link text-gray-600 hover:text-blue-500 px-3 py-2 text-sm font-medium border-b-2">Tantangan</a>
+                        <a href="#challenges" class="nav-link text-gray-600 hover:text-blue-500 px-3 py-2 text-sm font-medium border-b-2">Tantangan & Aksi</a>
                         <a href="#inovation-process" class="nav-link text-gray-600 hover:text-blue-500 px-3 py-2 text-sm font-medium border-b-2">Inovasi & Proses</a>
-                        <a href="#action-plan" class="nav-link text-gray-600 hover:text-blue-500 px-3 py-2 text-sm font-medium border-b-2">Rencana Aksi</a>
+                        
                     </div>
                 </div>
                 <div class="md:hidden">
                     <select id="mobile-nav" class="bg-gray-200 border border-gray-300 rounded-md py-1 px-2 text-sm">
                         <option value="#summary">Ringkasan</option>
                         <option value="#achievements">Pencapaian</option>
-                        <option value="#challenges">Tantangan</option>
+                        <option value="#challenges">Tantangan dan Aksi</option>
                         <option value="#inovation-process">Inovasi & Proses</option>
-                        <option value="#action-plan">Rencana Aksi</option>
                     </select>
                 </div>
             </div>
@@ -118,7 +117,7 @@
                             </div>
                             <div class="accordion-item bg-white rounded-lg shadow-sm border border-gray-200">
                                 <div class="accordion-header p-4 cursor-pointer flex justify-between items-center">
-                                    <h5 class="font-semibold text-gray-700">Pengurangan Inquire Rubbish Website</h5>
+                                    <h5 class="font-semibold text-gray-700">Pengurangan Inquiry Rubbish pada Website</h5>
                                     <span class="text-xl rotate-icon">+</span>
                                 </div>
                                 <div class="accordion-content px-4 pb-4">
@@ -154,94 +153,7 @@
             </div>
         </section>
 
-        <section id="challenges" class="mb-16 md:mb-24 scroll-mt-20">
-            <h2 class="text-3xl font-bold text-center mb-4 text-gray-900">Challenges</h2>
-            <p class="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12">Bagian ini menguraikan tantangan-tantangan kunci yang dihadapi tim SnG selama periode pelaporan. Gunakan tab untuk beralih antara isu kuantitatif berbasis metrik dan hambatan kualitatif yang lebih luas.</p>
-            
-            <div class="max-w-4xl mx-auto">
-                <div class="flex border-b border-gray-300 mb-6">
-                    <button class="tab-button flex-1 py-2 text-center font-semibold transition-colors duration-300" data-tab="quantitative">Kuantitatif</button>
-                    <button class="tab-button flex-1 py-2 text-center font-semibold transition-colors duration-300" data-tab="qualitative">Kualitatif</button>
-                </div>
-
-                <div id="quantitative-tab" class="tab-content space-y-4">
-                    <div class="bg-white p-6 rounded-lg shadow-md border border-gray-200">
-                        <h4 class="font-semibold mb-4 text-gray-700">Sulit Mencapai Target Bulanan</h4>
-                        <p class="text-sm text-gray-700 mb-4">Dalam 6 bulan terakhir (Jan-Jun), kami hanya 1x mencapai target bulanan. Rata-rata persentase pencapaian adalah 83%. Hal ini memerlukan penyesuaian terkait target seperti hasil rapat bulan Juni dengan Mbak Septy.</p>
-                        <div class="chart-container">
-                            <canvas id="targetChart"></canvas>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="qualitative-tab" class="tab-content hidden space-y-4">
-                    <div class="accordion-item bg-white rounded-lg shadow-md border border-gray-200">
-                        <div class="accordion-header p-4 cursor-pointer flex justify-between items-center">
-                            <h4 class="font-semibold text-gray-700">Ketersediaan RMA (Registered Migration Agent)</h4>
-                            <span class="text-xl rotate-icon">+</span>
-                        </div>
-                        <div class="accordion-content px-4 pb-4">
-                            <p class="text-sm text-gray-700">Penurunan jumlah konsultasi di bulan Juli karena hanya ada 2 RMA yang tersedia, sehingga diperlukan penambahan Contrator RMA.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item bg-white rounded-lg shadow-md border border-gray-200">
-                        <div class="accordion-header p-4 cursor-pointer flex justify-between items-center">
-                            <h4 class="font-semibold text-gray-700">Kekurangan Manpower</h4>
-                            <span class="text-xl rotate-icon">+</span>
-                        </div>
-                        <div class="accordion-content px-4 pb-4">
-                            <p class="text-sm text-gray-700">Perlu penambahan 1 orang staf desainer dan juga junior webmaster (staf) yang nantinya juga akan ditugaskan untuk mengalokasikan leads pada Insightly dan Teamwave.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item bg-white rounded-lg shadow-md border border-gray-200">
-                        <div class="accordion-header p-4 cursor-pointer flex justify-between items-center">
-                            <h4 class="font-semibold text-gray-700">Pengembangan AI dalam Pembuatan Desain & Website</h4>
-                            <span class="text-xl rotate-icon">+</span>
-                        </div>
-                        <div class="accordion-content px-4 pb-4">
-                            <p class="text-sm text-gray-700">Tantangan dalam pengembangan AI untuk otomatisasi dan peningkatan proses pembuatan desain dan website.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item bg-white rounded-lg shadow-md border border-gray-200">
-                        <div class="accordion-header p-4 cursor-pointer flex justify-between items-center">
-                            <h4 class="font-semibold text-gray-700">Sulit Mendapatkan Laptop Murah dengan Spesifikasi Bagus dalam Lelang</h4>
-                            <span class="text-xl rotate-icon">+</span>
-                        </div>
-                        <div class="accordion-content px-4 pb-4">
-                            <p class="text-sm text-gray-700">Sulitnya mendapatkan laptop murah dengan spesifikasi bagus dalam lelang, karena para pelaku kerap menaikkan harga yang cukup tinggi pada detik-detik akhir.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item bg-white rounded-lg shadow-md border border-gray-200">
-                        <div class="accordion-header p-4 cursor-pointer flex justify-between items-center">
-                            <h4 class="font-semibold text-gray-700">Penyimpanan Gmail Penuh</h4>
-                            <span class="text-xl rotate-icon">+</span>
-                        </div>
-                        <div class="accordion-content px-4 pb-4">
-                            <p class="text-sm text-gray-700">Seiring berjalan waktu, penyimpanan pada Gmail akan penuh; perlu melakukan penghapusan atau pemindahan file setiap tahun.</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item bg-white rounded-lg shadow-md border border-gray-200">
-                        <div class="accordion-header p-4 cursor-pointer flex justify-between items-center">
-                            <h4 class="font-semibold text-gray-700">Downgrade Google Workspace OC</h4>
-                            <span class="text-xl rotate-icon">+</span>
-                        </div>
-                        <div class="accordion-content px-4 pb-4">
-                            <p class="text-sm text-gray-700">Downgrade Google Workspace OC yang akan dilakukan bulan September mendatang akan menimbulkan permasalahan penyimpanan pada beberapa pengguna, terutama Ibu Indah. Akan diberlakukan pengunduhan seluruh file dan penempatannya pada cloud server (data yang tersimpan nantinya hanya data klien 2024 & 2025 serta dokumen penting lainnya).</p>
-                        </div>
-                    </div>
-                    <div class="accordion-item bg-white rounded-lg shadow-md border border-gray-200">
-                        <div class="accordion-header p-4 cursor-pointer flex justify-between items-center">
-                            <h4 class="font-semibold text-gray-700">Investasi Cloud Storage untuk Backup File Server</h4>
-                            <span class="text-xl rotate-icon">+</span>
-                        </div>
-                        <div class="accordion-content px-4 pb-4">
-                            <p class="text-sm text-gray-700">Perlu investasi cloud storage untuk backup file server (untuk menghindari kehilangan file jika *hard disk* rusak atau terserang virus). Saat ini cloud server kami berada pada Google Workspace OC yang pada September nanti akan di-*downgrade*, dan kami harus menghapus backup dari cloud tersebut.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        
         <section id="inovation-process" class="mb-16 md:mb-24 scroll-mt-20">
             <h2 class="text-3xl font-bold text-center mb-4 text-gray-900">Inovasi & Proses Berkelanjutan</h2>
             <p class="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12">Bagian ini merinci inisiatif, evaluasi kebijakan, dan pengembangan teknologi yang sedang berjalan atau telah dimulai dalam periode pelaporan, menunjukkan komitmen kami terhadap peningkatan berkelanjutan.</p>
@@ -350,24 +262,10 @@
             </div>
         </section>
 
-        <section id="action-plan" class="mb-16 md:mb-24 scroll-mt-20">
-            <h2 class="text-3xl font-bold text-center mb-4 text-gray-900">Rencana Aksi & Langkah Berikutnya</h2>
+        <section id="challenges" class="mb-16 md:mb-24 scroll-mt-20">
+            <h2 class="text-3xl font-bold text-center mb-4 text-gray-900">Challenge and Actions</h2>
             <p class="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-12">Berdasarkan pencapaian dan tantangan, bagian ini menyajikan rencana aksi konkret untuk perbaikan dan strategi ke depan, memastikan tim SnG terus berkembang dan berinovasi.</p>
             <div class="space-y-8">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-4 bg-white rounded-lg shadow-lg border border-gray-200 items-start hover:bg-gray-50 transition-colors duration-300">
-                    <div>
-                        <h4 class="font-bold text-blue-600">Tantangan</h4>
-                        <p class="mt-2 text-sm">Sulit Mencapai Target Bulanan</p>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-green-600">Solusi yang Diusulkan</h4>
-                        <p class="mt-2 text-sm">Penyesuaian target atau menaikan value sosmed view berdasrkan hasil meeting bulan june dengan Mbk Septy</p>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-purple-600">Status</h4>
-                        <p class="mt-2 text-sm"><strong>Status:</strong> Sedang Dikaji. </p>
-                    </div>
-                </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-4 bg-white rounded-lg shadow-lg border border-gray-200 items-start hover:bg-gray-50 transition-colors duration-300">
                     <div>
                         <h4 class="font-bold text-blue-600">Tantangan</h4>

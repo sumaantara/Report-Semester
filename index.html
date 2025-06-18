@@ -6,16 +6,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Chosen Palette: Calm Harmony Neutrals -->
-    <!-- Application Structure Plan: Tata letak dasbor satu halaman dengan navigasi atas yang lengket untuk akses cepat ke bagian-bagian utama. Struktur ini memprioritaskan aliran informasi dari atas ke bawah: dimulai dengan ringkasan eksekutif tingkat tinggi yang menyoroti poin-poin penting, beralih ke bagian Pencapaian untuk detail kesuksesan, kemudian merinci Tantangan dengan visualisasi data, menyajikan Inovasi & Proses yang sedang berjalan, dan akhirnya menampilkan Rencana Aksi strategis. Pendekatan dasbor non-linier ini dipilih di atas format slide-by-slide untuk memungkinkan berbagai pemangku kepentingan dengan cepat mengakses informasi yang paling relevan bagi mereka. Elemen interaktif seperti filter bagan, tab, dan akordeon digunakan untuk mengelola kepadatan informasi dan mendorong eksplorasi pengguna. -->
-    <!-- Visualization & Content Choices:
-        - Report Info: Ringkasan Eksekutif (Pencapaian Target, Status Aplikasi, Dampak Desain) -> Tujuan: Memberi informasi, menarik perhatian. -> Visualisasi/Presentasi: Kartu Metrik Kunci (HTML/CSS) dan ringkasan tekstual. -> Interaksi: Efek hover sederhana. -> Justifikasi: Memberikan gambaran singkat yang dapat dipindai tentang hasil paling kritis.
-        - Report Info: Pencapaian (Aplikasi Inventory, Insightly Grouping, Konten Viral, Inquire Rubbish, Artikel AI) -> Tujuan: Memberi informasi, menyediakan detail, menunjukkan dampak. -> Visualisasi/Presentasi: Daftar pencapaian yang dikategorikan dengan detail (HTML/CSS). -> Interaksi: Akordeon untuk detail setiap pencapaian. -> Justifikasi: Memungkinkan pengguna untuk memperluas dan membaca lebih lanjut tentang pencapaian tertentu tanpa membebani tampilan awal.
-        - Report Info: Tantangan (Target Bulanan, RMA, Manpower, AI Design, Lelang Laptop, Gmail Storage, Downgrade GWS, Cloud Backup) -> Tujuan: Memberi informasi, mengkategorikan, menyoroti area kritis. -> Visualisasi/Presentasi: Antarmuka bertab untuk "Kuantitatif" (dengan bagan batang untuk rata-rata pencapaian target) dan "Kualitatif" (dengan akordeon untuk detail). -> Interaksi: Perpindahan tab, ekspansi akordeon. -> Justifikasi: Mengorganisir berbagai tantangan ke dalam kategori yang mudah dicerna dan memungkinkan visualisasi langsung dari isu kuantitatif.
-        - Report Info: Inovasi & Proses (Evaluasi Kebijakan PIC, SOP, Sistem Baru, Upgrade PC, Peremajaan Laptop, Siklus Aset) -> Tujuan: Memberi informasi tentang pekerjaan yang sedang berlangsung dan perubahan kebijakan. -> Visualisasi/Presentasi: Daftar yang dikategorikan (HTML/CSS) dengan akordeon untuk detail status. -> Interaksi: Akordeon untuk detail/status. -> Justifikasi: Memisahkan "pekerjaan yang sedang berlangsung" dari "pencapaian yang telah selesai" untuk kejelasan.
-        - Report Info: Rencana Aksi (Solusi Tantangan) -> Tujuan: Memberi informasi, menunjukkan solusi yang diusulkan. -> Visualisasi/Presentasi: Tata letak kisi yang memetakan Tantangan -> Solusi yang Diusulkan -> Status/PIC (HTML/CSS grid). -> Interaksi: Hover untuk menyorot baris. -> Justifikasi: Menciptakan garis pandang yang jelas dari masalah yang teridentifikasi ke rencana solusi.
-    -->
-    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #F8F7F4; color: #333333; }
         .nav-link { transition: color 0.3s, border-color 0.3s; }
@@ -24,9 +14,8 @@
         .chart-container { position: relative; width: 100%; max-width: 700px; margin: auto; height: 350px; max-height: 45vh; }
         .tab-button.active { background-color: #4A90E2; color: white; }
         .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.5s ease-out; }
-        .accordion-item.open .accordion-content { max-height: 500px; /* Sesuaikan sesuai kebutuhan konten */ }
-        .accordion-header span.rotate-icon { transform: rotate(0deg); transition: transform 0.3s ease-out; }
-        .accordion-item.open .accordion-header span.rotate-icon { transform: rotate(90deg); }
+        .accordion-item.open .accordion-content { max-height: 500px; /* Adjust as needed for content */ }
+        /* The rotation was handled by JS directly changing text content, so no CSS rotation needed here */
     </style>
 </head>
 <body class="antialiased">
@@ -377,6 +366,14 @@
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             // Chart for monthly target achievement
+            // You had a chart section in your HTML comments, but no actual canvas element with id="targetChart"
+            // I'm commenting out the chart script as it would cause an error without the canvas.
+            // If you want a chart, you'll need to add:
+            // <div class="chart-container mt-8">
+            //    <canvas id="targetChart"></canvas>
+            // </div>
+            // to your HTML, for example, within the #summary section.
+            /*
             const targetCtx = document.getElementById('targetChart').getContext('2d');
             new Chart(targetCtx, {
                 type: 'bar',
@@ -433,8 +430,10 @@
                     }
                 }
             });
+            */
 
-            // Tab functionality
+            // Tab functionality - No tabs found in the provided HTML. Commenting out.
+            /*
             const tabButtons = document.querySelectorAll('.tab-button');
             const tabContents = document.querySelectorAll('.tab-content');
             tabButtons.forEach(button => {
@@ -453,20 +452,19 @@
             });
             document.querySelector('.tab-button[data-tab="quantitative"]').classList.add('active', 'bg-blue-500', 'text-white');
             document.getElementById('quantitative-tab').classList.remove('hidden');
+            */
 
             // Accordion functionality
             const accordionItems = document.querySelectorAll('.accordion-item');
             accordionItems.forEach(item => {
                 const header = item.querySelector('.accordion-header');
-                const icon = header.querySelector('.rotate-icon');
+                const icon = header.querySelector('.rotate-icon'); // Make sure this element exists in your HTML for each accordion header
                 header.addEventListener('click', () => {
                     item.classList.toggle('open');
                     if (item.classList.contains('open')) {
                         icon.textContent = '−'; // Minus sign
-                        icon.classList.add('rotate-90');
                     } else {
                         icon.textContent = '+'; // Plus sign
-                        icon.classList.remove('rotate-90');
                     }
                 });
             });
